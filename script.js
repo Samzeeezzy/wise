@@ -45,8 +45,6 @@ if (year) year.textContent = new Date().getFullYear();
 
 // WISE opening-book welcome animation
 (() => {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
   const intro = document.createElement('div');
   intro.className = 'wise-book-intro';
   intro.setAttribute('role', 'status');
@@ -93,7 +91,6 @@ if (year) year.textContent = new Date().getFullYear();
     @keyframes wise-hand-open{0%{opacity:0;transform:translate(35px,35px) rotate(12deg)}20%{opacity:1}65%{transform:translate(-35px,-5px) rotate(-7deg)}100%{opacity:0;transform:translate(-65px,-12px) rotate(-13deg)}}
     @keyframes wise-caption-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
     @media(max-width:480px){.wise-book-stage{transform:scale(.88)}.wise-intro-brand{font-size:8px;letter-spacing:.17em}}
-    @media(prefers-reduced-motion:reduce){.wise-book-intro{display:none}}
   `;
 
   document.head.appendChild(style);
